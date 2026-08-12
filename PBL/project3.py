@@ -11,7 +11,6 @@ def decrypt(text):
         result += chr(ord(char) - 3)
     return result
 
-
 text = input("Enter string :")
 
 encrypted = encrypt(text)
