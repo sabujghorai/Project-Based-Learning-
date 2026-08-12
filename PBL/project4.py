@@ -24,5 +24,4 @@ def validate_email(email):
 email = input("Enter your email: ")
 
 result = validate_email(email)
-
 print(result)
