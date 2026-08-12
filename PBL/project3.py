@@ -4,7 +4,6 @@ def encrypt(text):
         result += chr(ord(char) + 3)
     return result
 
-
 def decrypt(text):
     result = ""
     for char in text:
