@@ -12,7 +12,7 @@ def decrypt(text):
     return result
 
 
-text = input("Enter string: ")
+text = input("Enter string :")
 
 encrypted = encrypt(text)
 print("Encrypted Code is :", encrypted)
