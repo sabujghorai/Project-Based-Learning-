@@ -10,10 +10,10 @@ def decrypt(text):
         result += chr(ord(char) - 3)
         return result
 
-string = input("Enter the string :")
+text = input("Enter the string :")
 
-encrypted = encrypt(string)
+encrypted = encrypt(text)
 print("Encrypted String is : ",encrypted)
 
-decrypted = decrypt(string)
+decrypted = decrypt(text)
 print("Decrypted String is :",decrypted)
