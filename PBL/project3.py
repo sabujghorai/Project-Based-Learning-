@@ -2,18 +2,18 @@ def encrypt(text):
     result = " "
     for char in text:
         result += chr(ord(char) + 3)
-    return result
+        return result
 
 def decrypt(text):
     result = " "
     for char in text:
-        result += chr(ord(char) - 3)
-    return result
+        result += char(ord(char) - 3)
+        return result
 
-text = input("Enter string :")
+string = int(input("Enter the string :"))
 
-encrypted = encrypt(text)
-print("Encrypted Code is :", encrypted)
+encrypted = encrypt(string)
+print("Encrypted String is : ",encrypted)
 
-decrypted = decrypt(encrypted)
-print("Decrypted code is :", decrypted)
+decrypted = decrypt(string)
+print("Decrypted String is :",decrypt)
