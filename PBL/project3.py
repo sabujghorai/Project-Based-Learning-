@@ -1,11 +1,11 @@
 def encrypt(text):
-    result = ""
+    result = " "
     for char in text:
         result += chr(ord(char) + 3)
     return result
 
 def decrypt(text):
-    result = ""
+    result = " "
     for char in text:
         result += chr(ord(char) - 3)
     return result
