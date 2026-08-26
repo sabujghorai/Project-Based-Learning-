@@ -33,7 +33,6 @@ def mark_attendance():
     except ValueError:
         print("Enter a valid number!")
 
-
 def show_attendance():
     for s in students:
         total = len(s["attendance"])
