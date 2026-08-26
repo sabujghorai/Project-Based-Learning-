@@ -1,73 +1,63 @@
-students = []
-stack = []
-
-def add_student():
-    name = input("Student name: ")
-    students.append({"name": name, "attendance": []})
-    print("Student added.")
-
-def mark_attendance():
-    if not students:
-        print("No students!")
-        return
-
-    for i, s in enumerate(students, 1):
-        print(i, s["name"])
-
-    try:
-        n = int(input("Student number: ")) - 1
-        if n < 0 or n >= len(students):
-            print("Invalid number!")
-            return
-
-        status = input("P = Present, A = Absent: ").upper()
-
-        if status not in ("P", "A"):
-            print("Invalid status!")
-            return
-
-        students[n]["attendance"].append(status)
-        stack.append((n, status))
-        print("Attendance marked.")
-
-    except ValueError:
-        print("Enter a valid number!")
-
-def show_attendance():
-    for s in students:
-        total = len(s["attendance"])
-        present = s["attendance"].count("P")
-        percentage = (present / total * 100) if total else 0
-        print(
-            f"{s['name']}: {s['attendance']} | "
-            f"{percentage:.1f}%"
-        )
-
-def undo():
-    if not stack:
-        print("Nothing to undo!")
-        return
-
-    n, status = stack.pop()
-    students[n]["attendance"].pop()
-    print(f"Undone: {students[n]['name']} -> {status}")
-
+student = []
+attendance = []
 
 while True:
-    print("\n1.Add Student  2.Mark Attendance  3.Show Attendance")
-    print("4.Undo  5.Exit")
 
-    choice = input("Choice: ")
+    print("1. Add Student")
+    print("2. View Student")
+    print("3. Mark Attendance")
+    print("4. View Attendance")
+    print("5. Search Student")
+    print("6. Exit")
 
-    if choice == "1":
-        add_student()
-    elif choice == "2":
-        mark_attendance()
-    elif choice == "3":
-        show_attendance()
-    elif choice == "4":
-        undo()
-    elif choice == "5":
+    choice = int(input("Enter your choice: "))
+    if choice == 1:
+        name = input("Enter Name: ")
+        student.append({
+            "Name": name
+        })
+        print("Student added successfully.")
+
+    elif choice == 2:
+        print("\nStudents:")
+        for i in student:
+            print(i["Name"])
+
+    elif choice == 3:
+        name = input("Enter Student Name: ")
+        Attendence = input("Enter P/A: ").upper()
+
+        if Attendence == "P":
+            print("Present")
+
+        elif Attendence == "A":
+            print("Absent")
+        else:
+            print("Wrong Attendence")
+        attendance.append({
+            "Name": name,
+            "Attendance": Attendence
+        })
+    elif choice == 4:
+        print("\nAttendance:")
+        for i in attendance:
+            print(
+                i["Name"],
+                "->",
+                i["Attendance"]
+            )
+
+    elif choice == 5:
+        name = input("Enter student name to search: ")
+        found = False
+        for i in student:
+            if i["Name"].lower() == name.lower():
+                print("Student Found:", i["Name"])
+                found = True
+        if found == False:
+            print("Student not found.")
+    elif choice == 6:
+        print("Exit")
         break
     else:
-        print("Invalid choice!")
+        print("You have entered a wrong choice")
