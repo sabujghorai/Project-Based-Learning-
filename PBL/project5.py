@@ -44,7 +44,6 @@ def show_attendance():
             f"{percentage:.1f}%"
         )
 
-
 def undo():
     if not stack:
         print("Nothing to undo!")
