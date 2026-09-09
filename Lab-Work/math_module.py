@@ -18,6 +18,6 @@ print(f"The GCD is : {math.gcd(a,b)}")
 
 
 # WAP in python program to find the LCM of two numbers using math Module
-a = int(input("Enter A :"))
-b = int(input("Enter B :"))
-print(f"The GCD is : {math.lcm(a,b)}")
+c = int(input("Enter A :"))
+d = int(input("Enter B :"))
+print(f"The GCD is : {math.lcm(c,d)}")
