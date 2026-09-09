@@ -16,7 +16,6 @@ b = int(input("Enter B :"))
 print(f"The GCD is : {math.gcd(a,b)}")
 
 
-
 # WAP in python program to find the LCM of two numbers using math Module
 c = int(input("Enter A :"))
 d = int(input("Enter B :"))
