@@ -4,18 +4,18 @@
 # L = [4,-7,0,0,3,-2,5,0,1]
 # Output --- [-7, -2, 0, 0, 0, 4, 3, 5, 1]
 
-# L = [4,-7,0,0,3,-2,5,0,1]
-# A = []
-# p =[]
-# q = []
-# for i in range(len(L)):
-#     if L[i] < 0:
-#         A.append(L[i])
-#     elif L[i] == 0:
-#         p.append(L[i])
-#     else:
-#         q.append(L[i])
-# print(A+p+q)
+L = [4,-7,0,0,3,-2,5,0,1]
+A = []
+p =[]
+q = []
+for i in range(len(L)):
+    if L[i] < 0:
+        A.append(L[i])
+    elif L[i] == 0:
+        p.append(L[i])
+    else:
+        q.append(L[i])
+print(A+p+q)
 
 
 
