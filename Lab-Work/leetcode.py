@@ -1,3 +1,4 @@
+import math
 # Write a python program to display the elements of a given list in the 
 # following meanner
 # [-ve, all zeros, +ve]
@@ -39,3 +40,19 @@
 # print(O)
 
 
+
+
+# no of possible permutaion of elements A = [1,2,3] of these elements 
+# Output = [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]
+A = [1, 2, 3]
+B = []
+
+
+for i in range(len(A)):
+    for j in range(len(A)):
+        for k in range(len(A)):
+            if i != j and j != k and i != k:
+                permutation = [A[i], A[j], A[k]]
+                B.append(permutation)
+
+print(B)
