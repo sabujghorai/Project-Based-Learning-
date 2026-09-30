@@ -1,5 +1,5 @@
 # Write a python program to display the elements of a given list in the following meanner
-# [-ve, all zeros, +ve]
+# [-ve, all zeros, +ve] 
 # L = [4,-7,0,0,3,-2,5,0,1]
 # Output --- [-7, -2, 0, 0, 0, 4, 3, 5, 1]
 
