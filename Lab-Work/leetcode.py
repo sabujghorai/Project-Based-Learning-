@@ -15,3 +15,8 @@ for i in range(len(L)):
     else:
         q.append(L[i])
 print(L1+p+q)
+
+
+
+
+# 
