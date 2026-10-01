@@ -20,7 +20,6 @@ print(A+p+q)
 
 
 
-
 # There will be 3 lists output list follows the rule
 # if the index is even fill by max no.
 # if the index is odd fill by mun no.
