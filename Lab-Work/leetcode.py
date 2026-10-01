@@ -47,7 +47,6 @@ print(O)
 A = [1, 2, 3]
 B = []
 
-
 for i in range(len(A)):
     for j in range(len(A)):
         for k in range(len(A)):
