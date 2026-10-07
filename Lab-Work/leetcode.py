@@ -68,4 +68,7 @@ for ch in L:
 for ch in s:
     print(ch,":", s[ch])
 
-    
+
+# Display the first Non-Repeating character
+# Ex - swiss
+# the first non repeating character is 'w'
