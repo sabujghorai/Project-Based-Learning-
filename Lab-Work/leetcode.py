@@ -94,4 +94,4 @@ for ch in L:
         duplicate[ch] = 1
 
 for ch in duplicate:
-    print(ch,end =" ")
+    print(ch)
