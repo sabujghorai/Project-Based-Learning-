@@ -104,6 +104,6 @@
 # Output - powerful very is programming Python
 
 A = input("Enter Word :")
-Reversed = A.split()
-reverse_word = (Reversed[::-1])
-print(" ".join(reverse_word))
+Reverse = A.split()
+reverse_word = (Reverse[::-1])
+print(" ",reverse_word)
