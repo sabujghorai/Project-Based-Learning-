@@ -85,15 +85,25 @@
 
 # Remove the Duplicate character
 
-L = "ProperRP"
-duplicate = {}
-for ch in L:
-    if ch in duplicate:
-        duplicate[ch] = duplicate[ch] + 1
-    if ch.upper == ch.lower:
-            duplicate[ch]
-    else:
-        duplicate[ch] = 1
+# L = "ProperRP"
+# duplicate = {}
+# for ch in L:
+#     if ch in duplicate:
+#         duplicate[ch] = duplicate[ch] + 1
+#     if ch.upper == ch.lower:
+#             duplicate[ch]
+#     else:
+#         duplicate[ch] = 1
 
-for ch in duplicate:
-    print(ch,end=" ")
+# for ch in duplicate:
+#     print(ch,end=" ")
+
+
+# Reverse word in a sentence
+# Ex - Python programming is very powerful
+# Output - powerful very is programming Python
+
+A = input("Enter Word :")
+Reversed = A.split()
+reverse_word = (Reversed[::-1])
+print(" ".join(reverse_word))
