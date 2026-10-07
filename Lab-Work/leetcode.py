@@ -85,11 +85,13 @@
 
 # Remove the Duplicate character
 
-L = "PROGRAMMING"
+L = "ProperRP"
 duplicate = {}
 for ch in L:
     if ch in duplicate:
         duplicate[ch] = duplicate[ch] + 1
+    if ch.upper == ch.lower:
+            duplicate[ch]
     else:
         duplicate[ch] = 1
 
