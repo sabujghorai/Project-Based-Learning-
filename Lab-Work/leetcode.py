@@ -131,8 +131,7 @@ for i in range(len(nums)):
     for j in range(len(nums)):
         for k in range(len(nums)):
             if i != j and j != k and i != k:
-                permutation_1 = (nums[i],nums[j],nums[k])
+                permutation_1 = [nums[i],nums[j],nums[k]]
                 if permutation_1 not in z:
                     z.append(permutation_1)
 print(z)
-                
