@@ -112,7 +112,8 @@
 # print(" ".join(reverse_word))
 
 
-# 47 Leetcode - II 
+# 47 Leetcode - II
+
 # Given a collection of numbers, nums, 
 # that might contain duplicates, 
 # return all possible unique permutations in any order.
@@ -124,4 +125,14 @@
 #  [2,1,1]]
 
 
-nums
+nums = [1,1,2]
+z = []
+for i in range(len(nums)):
+    for j in range(len(nums)):
+        for k in range(len(nums)):
+            if i != j and j != k and i != k:
+                permutation_1 = (nums[i],nums[j],nums[k])
+                if permutation_1 not in z:
+                    z.append(permutation_1)
+print(z)
+                
