@@ -168,9 +168,9 @@
 # write a python program to calculate the frequency of all elements of given list
 # Example : L = [1,3,2,4,5,4,4,1]
 
-L = [1,1,2,3,4,2,5,6,]
+list = [1,1,2,3,4,2,5,6,]
 s = {}
-for nums in L:
+for nums in list:
     if nums in s:
         s[nums] = s[nums] + 1
     else:
