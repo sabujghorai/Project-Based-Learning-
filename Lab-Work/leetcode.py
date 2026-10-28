@@ -1,152 +1,152 @@
-# import math
-# # Write a python program to display the elements of a given list in the 
-# # following meanner
-# # [-ve, all zeros, +ve]
-# # L = [4,-7,0,0,3,-2,5,0,1]
-# # Output --- [-7, -2, 0, 0, 0, 4, 3, 5, 1]
-
+import math
+# Write a python program to display the elements of a given list in the 
+# following meanner
+# [-ve, all zeros, +ve]
 # L = [4,-7,0,0,3,-2,5,0,1]
-# A = []
-# p =[]
-# q = []
-# for i in range(len(L)):
-#     if L[i] < 0:
-#         A.append(L[i])
-#     elif L[i] == 0:
-#         p.append(L[i])
-#     else:
-#         q.append(L[i])
-# print(A+p+q)
+# Output --- [-7, -2, 0, 0, 0, 4, 3, 5, 1]
+
+L = [4,-7,0,0,3,-2,5,0,1]
+A = []
+p =[]
+q = []
+for i in range(len(L)):
+    if L[i] < 0:
+        A.append(L[i])
+    elif L[i] == 0:
+        p.append(L[i])
+    else:
+        q.append(L[i])
+print(A+p+q)
 
 
 
-# # There will be 3 lists output list follows the rule
-# # if the index is even fill by max no.
-# # if the index is odd fill by mun no.
-# # among 3 list
+# There will be 3 lists output list follows the rule
+# if the index is even fill by max no.
+# if the index is odd fill by mun no.
+# among 3 list
 
-# L1 = [10,7,-2,14]
-# L2 = [-22,11,3,9]
-# L3 = [1,3,5,4]
+L1 = [10,7,-2,14]
+L2 = [-22,11,3,9]
+L3 = [1,3,5,4]
 
-# O = []
+O = []
 
-# for i in range(len(L1)):
-#     if i % 2 == 0:
-#         O.append(max(L1[i],L2[i],L3[i]))
-#     else:
-#         O.append(min(L1[i],L2[i],L3[i]))
-# print(O)
-
-
-# # 46 permutation - I
-# # no of possible permutaion of elements A = [1,2,3] of these elements 
-# # Output = [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]
-# A = [1, 2, 3]
-# B = []
-
-# for i in range(len(A)):
-#     for j in range(len(A)):
-#         for k in range(len(A)):
-#             if i != j and j != k and i != k:
-#                 permutation = [A[i], A[j], A[k]]
-#                 B.append(permutation)
-# print(B)
+for i in range(len(L1)):
+    if i % 2 == 0:
+        O.append(max(L1[i],L2[i],L3[i]))
+    else:
+        O.append(min(L1[i],L2[i],L3[i]))
+print(O)
 
 
-# # Write a python program to count frequency of each character
-# # PROGRAMMING.   P-1, R-2, 0-1, G-2, A-1, M-2, I-1, N-1
+# 46 permutation - I
+# no of possible permutaion of elements A = [1,2,3] of these elements 
+# Output = [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]
+A = [1, 2, 3]
+B = []
 
-# L = input("Enter string :")
-# s = {}
-# for ch in L:
-#     if ch in s:
-#         s[ch] = s[ch] + 1
-#     else:
-#         s[ch] = 1
-
-# for ch in s:
-#     print(ch,":", s[ch])
-
-
-# # Display the first Non-Repeating character
-# # Ex - swiss
-# # the first non repeating character is 'w'
-
-# p = "swissizz"
-# q = {}
-# for ch in p:
-#     if ch in q:
-#         q[ch] = q[ch] + 1
-#     else:
-#         q[ch] = 1
-# for ch in p:
-#     if q[ch] == 1:
-#         print("First non repeating character is:", ch)
-#         break
+for i in range(len(A)):
+    for j in range(len(A)):
+        for k in range(len(A)):
+            if i != j and j != k and i != k:
+                permutation = [A[i], A[j], A[k]]
+                B.append(permutation)
+print(B)
 
 
-# # Remove the Duplicate character
+# Write a python program to count frequency of each character
+# PROGRAMMING.   P-1, R-2, 0-1, G-2, A-1, M-2, I-1, N-1
 
-# L = "ProperRP"
-# duplicate = {}
-# for ch in L:
-#     if ch in duplicate:
-#         duplicate[ch] = duplicate[ch] + 1
-#     if ch.upper == ch.lower:
-#             duplicate[ch]
-#     else:
-#         duplicate[ch] = 1
+L = input("Enter string :")
+s = {}
+for ch in L:
+    if ch in s:
+        s[ch] = s[ch] + 1
+    else:
+        s[ch] = 1
 
-# for ch in duplicate:
-#     print(ch,end=" ")
-
-
-# # Reverse word in a sentence
-# # Ex - Python programming is very powerful
-# # Output - powerful very is programming Python
-
-# A = input("Enter Word :")
-# Reverse = A.split()
-# reverse_word = (Reverse[::-1])
-# print(" ".join(reverse_word))
+for ch in s:
+    print(ch,":", s[ch])
 
 
-# # 47 Leetcode - II
+# Display the first Non-Repeating character
+# Ex - swiss
+# the first non repeating character is 'w'
 
-# # Given a collection of numbers, nums, 
-# # that might contain duplicates, 
-# # return all possible unique permutations in any order.
-
-# # Input: nums = [1,1,2]
-# # Output:
-# # [[1,1,2],
-# #  [1,2,1],
-# #  [2,1,1]]
-
-
-# nums = [1,1,2]
-# z = []
-# for i in range(len(nums)):
-#     for j in range(len(nums)):
-#         for k in range(len(nums)):
-#             if i != j and j != k and i != k:
-#                 permutation_1 = [nums[i],nums[j],nums[k]]
-#                 if permutation_1 not in z:
-#                     z.append(permutation_1)
-# print(z)
+p = "swissizz"
+q = {}
+for ch in p:
+    if ch in q:
+        q[ch] = q[ch] + 1
+    else:
+        q[ch] = 1
+for ch in p:
+    if q[ch] == 1:
+        print("First non repeating character is:", ch)
+        break
 
 
-# # Write a python program to eleminate all the duplicate values
-# # from the given list
+# Remove the Duplicate character
 
-# list = [1,2,4,3,6,5,7,1,2]
-# dict = []
-# for i in list:
-#     if i not in dict:
-#         dict.append(i)
+L = "ProperRP"
+duplicate = {}
+for ch in L:
+    if ch in duplicate:
+        duplicate[ch] = duplicate[ch] + 1
+    if ch.upper == ch.lower:
+            duplicate[ch]
+    else:
+        duplicate[ch] = 1
 
-# print(dict)
+for ch in duplicate:
+    print(ch,end=" ")
+
+
+# Reverse word in a sentence
+# Ex - Python programming is very powerful
+# Output - powerful very is programming Python
+
+A = input("Enter Word :")
+Reverse = A.split()
+reverse_word = (Reverse[::-1])
+print(" ".join(reverse_word))
+
+
+# 47 Leetcode - II
+
+# Given a collection of numbers, nums, 
+# that might contain duplicates, 
+# return all possible unique permutations in any order.
+
+# Input: nums = [1,1,2]
+# Output:
+# [[1,1,2],
+#  [1,2,1],
+#  [2,1,1]]
+
+
+nums = [1,1,2]
+z = []
+for i in range(len(nums)):
+    for j in range(len(nums)):
+        for k in range(len(nums)):
+            if i != j and j != k and i != k:
+                permutation_1 = [nums[i],nums[j],nums[k]]
+                if permutation_1 not in z:
+                    z.append(permutation_1)
+print(z)
+
+
+# Write a python program to eleminate all the duplicate values
+# from the given list
+
+list = [1,2,4,3,6,5,7,1,2]
+dict = []
+for i in list:
+    if i not in dict:
+        dict.append(i)
+
+print(dict)
 
 
 # write a python program to interchage the maximum and minimum element of a given tuple
